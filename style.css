@@ -1,0 +1,234 @@
+/* ---------- RESET ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+background:#f3f6fb;
+color:#1f2937;
+line-height:1.6;
+}
+
+/* ---------- NAV ---------- */
+
+header{
+background:white;
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:40px;
+list-style:none;
+padding:18px;
+}
+
+nav a{
+text-decoration:none;
+font-weight:600;
+color:#374151;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#2563eb;
+}
+
+/* ---------- SECCIONES ---------- */
+
+section{
+max-width:850px;
+margin:auto;
+padding:60px 20px;
+}
+
+h2{
+margin-bottom:20px;
+}
+
+/* ---------- TARJETA APP ---------- */
+
+#Lista{
+background:white;
+border-radius:14px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ---------- BOTONES ---------- */
+
+button{
+border:none;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+background:#e5e7eb;
+font-weight:500;
+transition:all .25s ease;
+}
+
+button:hover{
+transform:translateY(-2px);
+background:#d1d5db;
+}
+
+/* botón principal */
+
+#btnGasto{
+background:#2563eb;
+color:white;
+}
+
+#btnGasto:hover{
+background:#1d4ed8;
+}
+
+/* botón eliminar */
+
+#listaGastos button{
+background:#ef4444;
+color:white;
+margin-left:10px;
+}
+
+#listaGastos button:hover{
+background:#dc2626;
+}
+
+/* ---------- INPUT ---------- */
+
+input{
+padding:10px;
+border-radius:8px;
+border:1px solid #d1d5db;
+margin-right:8px;
+}
+
+/* ---------- LISTA ---------- */
+
+#listaGastos{
+list-style:none;
+margin-top:25px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+/* ---------- ITEM ---------- */
+
+#listaGastos li{
+display:flex;
+align-items:center;
+gap:10px;
+padding:12px 14px;
+background:#f9fafb;
+border-radius:8px;
+
+animation: aparecer .35s ease;
+
+transition:all .25s ease;
+}
+
+/* hover moderno */
+
+#listaGastos li:hover{
+background:#f1f5f9;
+transform:scale(1.01);
+}
+
+/* texto gasto */
+
+#listaGastos span{
+flex:1;
+transition:.25s;
+}
+
+/* completado */
+
+.completado span{
+text-decoration:line-through;
+color:#9ca3af;
+}
+
+/* ---------- ANIMACIONES ---------- */
+
+@keyframes aparecer{
+
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* animación eliminación */
+
+.eliminar{
+animation: eliminar .3s forwards;
+}
+
+@keyframes eliminar{
+
+to{
+opacity:0;
+transform:translateX(30px);
+}
+
+}
+
+/* ---------- FORM ---------- */
+
+form{
+display:flex;
+flex-direction:column;
+gap:12px;
+max-width:400px;
+}
+
+textarea{
+min-height:100px;
+padding:10px;
+border-radius:8px;
+border:1px solid #d1d5db;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:60px;
+background:white;
+border-top:1px solid #e5e7eb;
+color:#6b7280;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width:700px){
+
+nav ul{
+gap:20px;
+}
+
+#Lista{
+padding:25px;
+}
+
+#listaGastos li{
+flex-wrap:wrap;
+}
+
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de gastos</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!--Navegacion-->
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#Inicio">Inicio</a></li>
+          <li><a href="#Lista">Lista</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Inicio-->
+
+    <section id="Inicio">
+      <h2>Anotador de gastos puriyoteros</h2>
+      <p>Solo algo de practica de programación</p>
+    </section>
+
+    <!--Lista-->
+
+    <section id="Lista">
+      <h2>Gastos</h2>
+      <div>
+        <button data-filtro="pendientes">Pendientes</button>
+        <button data-filtro="completadas">Completados</button>
+        <button data-filtro="todas">Todos</button>
+      </div>
+      <input type="text" id="nuevoGasto" placeholder="Escribe tu gasto">
+      <button type="button" id="btnGasto">Ingresar</button>
+      <button type="button" id="btnMarcarTodos">Marcar/Desmarcar todos</button>
+      <ul id="listaGastos"></ul>
+    </section>
+
+    <!--Contacto-->
+
+    <section id="Contacto">
+      <h2>Contacto</h2>
+        <form>
+          <input type="text" placeholder="Nombre y apellido">
+          <input type="email" placeholder="Correo electrónico">
+          <input type="number" placeholder="Telefono">
+          <textarea placeholder="Tu mensaje"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!--Pie de pagina-->
+
+    <footer>
+      <p>© 2026 Lucas Guajardo | <a href="https://github.com/LucasGuajardo/Proyecto-de-practica.git" target="_blank">IR</a></p>
+    </footer>
+    <script src="script.js"></script>
+
+
+
+  </body>
+</html>
